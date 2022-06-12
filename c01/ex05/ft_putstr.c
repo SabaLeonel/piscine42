@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/09 15:09:14 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/12 10:59:59 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/12 17:04:10 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/12 17:58:42 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-void	ft_ft(int *nbr)
+void	ft_putstr(char *str)
 {
-	*nbr = 42;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	*ptr;
-
-	ptr = &a;
-	ft_ft  (ptr);
-	printf("%d", a);
+	char a[] = "test";
+	ft_putstr(a);
 }
 */

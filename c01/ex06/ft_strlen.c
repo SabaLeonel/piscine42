@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/09 15:09:14 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/12 10:59:59 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/12 17:59:48 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/12 18:09:10 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_ft(int *nbr)
+int	ft_strlen(char *str)
 {
-	*nbr = 42;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{	
+		i ++;
+	}
+	return (i);
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	*ptr;
-
-	ptr = &a;
-	ft_ft  (ptr);
-	printf("%d", a);
+	char a[] = "test";
+	printf("%d", ft_strlen(a));
 }
 */

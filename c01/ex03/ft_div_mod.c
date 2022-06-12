@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/09 15:09:14 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/12 10:59:59 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/12 16:22:05 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/12 16:47:13 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_ft(int *nbr)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*nbr = 42;
+	*div = a / b;
+	*mod = a % b;
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	*ptr;
+	int *ptrdiv;
+	int *ptrmod;
+	int x;
+	int y;
+	
+	ptrdiv = &x;
+	ptrmod = &y;
 
-	ptr = &a;
-	ft_ft  (ptr);
-	printf("%d", a);
+	ft_div_mod(47, 5, ptrdiv, ptrmod);
+	printf("%d", x);
+	printf("%d", y);
 }
 */
