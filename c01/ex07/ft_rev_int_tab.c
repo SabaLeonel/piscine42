@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 14:32:38 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/13 09:29:00 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/13 07:58:59 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/13 15:08:32 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_swap(int *a, int *b)
+#include <stdio.h>
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	c;
+	int	i;
+	int	swap;
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
-/*
-int	main()
+	i = 0;
+	while (i <= size / 2)
+	{
+		swap = tab [i];
+		tab [i] = tab[size - i - 1];
+		tab [size - i - 1] = swap;
+		i ++;
+	}
+	tab [i + 1] = '\0';
+}	
+
+int	main(void)
 {
-	int a;
-	int b;
-
-	a = 1;
-	b = 3;
-
-	ft_swap(&a, &b);
-
-	printf("%d", b);
-
+	int tab [] = {1,2,3,4,5,6,7,8,9,10};
+	int taille = 10;
+	int i = 0;
+	
+	ft_rev_int_tab(tab, taille);
+	while(i < taille)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
 	return (0);
 }
-*/
+

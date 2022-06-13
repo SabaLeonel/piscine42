@@ -1,3 +1,3 @@
 #! /bin/sh
 
-ifconfig -a | grep ether | tr -d ' ' | tr -d '\t'
+ifconfig -a | grep -w ether | tr -d 'ether' | tr -d '\t' | tr -d ' ' 

@@ -6,9 +6,10 @@
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 16:22:05 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/12 16:47:13 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/13 09:29:12 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;
