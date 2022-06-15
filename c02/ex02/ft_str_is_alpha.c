@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 17:27:04 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/15 12:36:24 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/15 11:36:11 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/15 20:00:06 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h> */
-
-char	*ft_strcpy(char *dest, char *src)
+/*#include <stdio.h>
+*/
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
-	}		
-	dest[i] = 0;
-	return (dest);
+		if (!((str[i] > 64 && str[i] < 91) || (str[i] > 96 && str[i] < 123)))
+			return (0);
+		i ++;
+	}
+	return (1);
 }
 /*
-int	main(void)
+int	main (void)
 {
-	char a[] = "test";
-	char b[] = "";
-	
-	ft_strcpy(b, a);
+	char str [] = "ew!qeD";
+	char minus [] = "qwedwq211d";
 
-	printf("%s", b);
-
+	printf("%d\n", ft_str_is_alpha(str));
+	printf("%d\n", ft_str_is_alpha(minus));
 }
 */

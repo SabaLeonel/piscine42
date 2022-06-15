@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
+/*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 17:27:04 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/15 12:36:24 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/15 17:33:10 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/15 17:53:55 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h> */
-
-char	*ft_strcpy(char *dest, char *src)
+/*#include <stdio.h>
+*/
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
-	}		
-	dest[i] = 0;
-	return (dest);
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
+		i ++;
+	}
+	return (str);
 }
 /*
 int	main(void)
 {
-	char a[] = "test";
-	char b[] = "";
-	
-	ft_strcpy(b, a);
+	char a[] = "ASDSADS";
 
-	printf("%s", b);
-
-}
-*/
+	printf("%s", ft_strlowcase(a));
+}*/

@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
+/*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 17:27:04 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/15 12:36:24 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/15 14:55:33 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/15 15:43:35 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h> */
-
-char	*ft_strcpy(char *dest, char *src)
+/*#include <stdio.h>
+*/
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (!(str[i] > 96 && str[i] < 123))
+			return (0);
 		i++;
-	}		
-	dest[i] = 0;
-	return (dest);
+	}
+	return (1);
 }
 /*
-int	main(void)
+int	main (void)
 {
-	char a[] = "test";
-	char b[] = "";
-	
-	ft_strcpy(b, a);
+	char lower [] = "et123213set";
 
-	printf("%s", b);
-
+	printf("%d", ft_str_is_lowercase(lower));
 }
 */

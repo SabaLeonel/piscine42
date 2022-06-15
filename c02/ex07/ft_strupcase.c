@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
+/*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 17:27:04 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/15 12:36:24 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/15 17:16:36 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/15 17:54:28 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h> */
+/*#include <stdio.h>*/
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
-	}		
-	dest[i] = 0;
-	return (dest);
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
+		i ++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 /*
 int	main(void)
 {
-	char a[] = "test";
-	char b[] = "";
-	
-	ft_strcpy(b, a);
+	char a[] = "ASDasase";
 
-	printf("%s", b);
-
-}
-*/
+	printf("%s", ft_strupcase(a));
+}*/
