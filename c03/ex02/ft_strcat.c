@@ -1,48 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsaba-qu <lsaba-qu@student.42lausan>       +#+  +:+       +#+        */
+/*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 19:05:15 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/16 19:06:06 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/16 09:53:18 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/16 10:26:24 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strcat(char *dest, char *src)
 {
-	int unsigned	i;
+	int	i;
+	int	len;
 
 	i = 0;
-	while (i < n && src[i])
+	len = 0;
+	while (dest[len])
 	{
-		dest[i] = src[i];
+		len ++;
+	}
+	while (src[i])
+	{
+		if (src[i])
+			dest[len + i] = src[i];
 		i ++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i ++;
-	}	
+	dest[i + len] = '\0';
 	return (dest);
 }
-
 /*
 int	main(void)
 {
-	char s[] = "Hello World";
-	char d[40] = "bonjour";
-	unsigned int i  = 5;
-
-	ft_strncpy(d, s, i);
-	printf("%s\n", d);
-
+	char a[] = "debut";
+	char b[40] = "fin";
 	
-	strncpy(d, s, i);
-	printf("%s", d);
-}
-*/
+	ft_strcat(b,a);
+	printf("%s", b);
+}*/
