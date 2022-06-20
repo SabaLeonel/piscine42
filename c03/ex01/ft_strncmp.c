@@ -6,7 +6,7 @@
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 08:44:18 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/19 15:54:22 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/20 18:29:29 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (i < n && (s1[i] || s2[i]))
+	while (s1[i] && s2[i]) && s1[i] && s2[i] && i < n -1)
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		if (s1[i] > s2[i])
-			return (1);
 		i ++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }
 /*
 int	main(void)
