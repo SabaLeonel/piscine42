@@ -6,7 +6,7 @@
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:17 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/20 17:23:33 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/21 16:25:23 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	ft_fibonacci(int index)
 /*
 int main(void)
 {
-	printf("%d",ft_fibonacci(40));
+	printf("%d",ft_fibonacci(4));
 }
 */

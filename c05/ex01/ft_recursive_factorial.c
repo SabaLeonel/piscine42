@@ -6,7 +6,7 @@
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 10:19:36 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/20 11:45:50 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/21 15:26:42 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ int	ft_recursive_factorial(int nb)
 /*
 int main (void)
 {
-	int i = 1;
-
-	printf("%d",	ft_recursive_factorial(i));
-}*/
+	printf("factoriel de :%d est : %d\n", 0, ft_recursive_factorial(0));
+	printf("factoriel de :%d est : %d\n", 1, ft_recursive_factorial(1));
+	printf("factoriel de :%d est : %d\n", 2, ft_recursive_factorial(2));
+	printf("factoriel de :%d est : %d\n", 3, ft_recursive_factorial(3));
+	printf("factoriel de :%d est : %d\n", 4, ft_recursive_factorial(4));
+	printf("factoriel de :%d est : %d\n", 5, ft_recursive_factorial(5));
+}
+*/
