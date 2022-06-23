@@ -1,39 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 09:50:15 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/23 11:31:45 by lsaba-qu         ###   ########.fr       */
+/*   Created: 2022/06/23 19:47:18 by lsaba-qu          #+#    #+#             */
+/*   Updated: 2022/06/23 19:47:21 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_str(char *c)
+int	ft_atoi(char *str)
 {
 	int	i;
+	int	signe;
+	int	res;
 
+	res = 0;
+	signe = 1;
 	i = 0;
-	while (c[i])
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i ++;
+	while (str[i] == '+' || str[i] == '-')
 	{
-		write (1, &c[i], 1);
+		signe *= -1;
 		i ++;
 	}
-	write(1, "\n", 1);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res += str[i] - 48;
+		if (str[i + 1] >= '0' && str[i + 1] <= '9')
+			res *= 10;
+		else
+			break ;
+		i ++;
+	}
+	return (res * signe);
 }
-
-int	main(int argc, char **argv)
+/*
+int	main()
 {
-	int	i;
+	char *c = " ---+-e-+1234ab567";
 
-	i = 1;
-	while (i < argc)
-	{
-		ft_str(argv[i]);
-		i ++;
-	}
-	return (0);
-}
+	printf("%d",ft_atoi(c));
+}*/
