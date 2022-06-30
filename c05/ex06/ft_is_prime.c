@@ -6,16 +6,14 @@
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:06:44 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/28 18:08:14 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/30 11:43:42 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-
 int	ft_is_prime(int nb)
 {
-
 	int	i;
 
 	i = 2;
@@ -23,14 +21,13 @@ int	ft_is_prime(int nb)
 		return (0);
 	while (i * i < nb)
 	{
-		if (nb % i > 0)
+		if (nb % i == 0)
 		{
-			return (1);
+			return (0);
 		}
 		i ++;
 	}
-
-	return (0);
+	return (1);
 }
 /*
 int main()

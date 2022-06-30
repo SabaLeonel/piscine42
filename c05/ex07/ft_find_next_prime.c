@@ -6,7 +6,7 @@
 /*   By: lsaba-qu <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:09:25 by lsaba-qu          #+#    #+#             */
-/*   Updated: 2022/06/28 18:26:14 by lsaba-qu         ###   ########.fr       */
+/*   Updated: 2022/06/30 10:37:20 by lsaba-qu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_is_prime(int nb)
 {
-
 	int	i;
 
 	i = 2;
@@ -22,18 +21,16 @@ int	ft_is_prime(int nb)
 		return (0);
 	while (i * i < nb)
 	{
-		if (nb % i > 0)
+		if (nb % i == 0)
 		{
-			return (1);
+			return (0);
 		}
 		i ++;
 	}
-
-	return (0);
+	return (1);
 }
 
-
-int ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
 	int	i;
 
@@ -69,3 +66,4 @@ int main()
 	i = 15;
 	printf("Resultat du nombre premier de %d est : %d\n", i, ft_find_next_prime(i));
 }
+
